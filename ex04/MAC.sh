@@ -1,14 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    clean                                              :+:      :+:    :+:    #
+#    MAC.sh                                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/22 14:24:20 by anpayot           #+#    #+#              #
-#    Updated: 2024/09/22 14:36:03 by anpayot          ###   ########.fr        #
+#    Created: 2024/09/22 14:54:42 by anpayot           #+#    #+#              #
+#    Updated: 2024/09/22 15:50:22 by anpayot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#!/bin/sh
-find . -type f \( -name "*~" -o -name "*#" -o -name "#*" \) -print -delete 
+!/bin/sh
+ifconfig | grep -oE '([[:xdigit:]]{2}:){5}[[:xdigit:]]{2}'
+
+#ifconfig | awk '/ether/ {print $2}'

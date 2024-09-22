@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 22:07:56 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/21 21:15:04 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/22 15:28:10 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ void    ft_printnumbers(void)
 
     c = '1';
     while(c <= '9')
-    {
-        ft_putchar(c);
-        c++;
-    }
+        ft_putchar(c++);
 }

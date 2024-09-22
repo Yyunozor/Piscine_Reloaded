@@ -1,14 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    clean                                              :+:      :+:    :+:    #
+#    find_sh.sh                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/22 14:24:20 by anpayot           #+#    #+#              #
-#    Updated: 2024/09/22 14:36:03 by anpayot          ###   ########.fr        #
+#    Created: 2024/09/22 14:37:04 by anpayot           #+#    #+#              #
+#    Updated: 2024/09/22 14:53:00 by anpayot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-find . -type f \( -name "*~" -o -name "*#" -o -name "#*" \) -print -delete 
+find . -type f -name "*.sh" | while read -r file; do
+    basename "$file" .sh
+done

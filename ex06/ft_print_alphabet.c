@@ -1,4 +1,16 @@
-void    ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/22 15:18:53 by anpayot           #+#    #+#             */
+/*   Updated: 2024/09/22 15:26:58 by anpayot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int    ft_putchar(int c);
 
 void    ft_print_alphabet(void)
 {
@@ -6,14 +18,5 @@ void    ft_print_alphabet(void)
 
     c = 'a';
     while(c <= 'z')
-    {
-        ft_putchar(c);
-        c++;
-    }
-}
-
-int main(void)
-{
-    ft_print_alphabet();
-    return 0;
+        ft_putchar(c++);
 }
