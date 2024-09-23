@@ -6,13 +6,13 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 22:04:11 by yyuno             #+#    #+#             */
-/*   Updated: 2024/09/22 15:34:57 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/23 21:06:05 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
-    *nbr = 42;
+	*nbr = 42;
 }
 
 /*
