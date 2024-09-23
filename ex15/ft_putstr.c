@@ -3,13 +3,8 @@ int ft_putchar(int c);
 
 void	ft_putstr(char *str)
 {
-    int	i;
-
-    i = 0;
-    while (str[i])
-    {
-        ft_putchar(str[i++]);
-    }
+    while (*str)
+        ft_putchar(*str++);
 }
 
 int main(void)
