@@ -6,11 +6,11 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 12:33:10 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/24 14:12:16 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/24 14:15:33 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_putchar(char c);
+int	ft_putchar(int c);
 
 void	ft_putstr(char *str)
 {
