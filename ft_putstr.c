@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 22:08:27 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/24 16:32:18 by anpayot          ###   ########.fr       */
+/*   Created: 2024/09/24 16:27:59 by anpayot           #+#    #+#             */
+/*   Updated: 2024/09/24 16:30:00 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_putchar(int c);
 
-#define	EOF (-1)
-
-int	ft_putchar(int c)
+void	ft_putstr(char *str)
 {
-	unsigned char	ch = (unsigned char)c;
-	return (write(1, &ch, 1) == 1) ? c : EOF;
+	while (*str)
+		ft_putchar(*str++);
 }
