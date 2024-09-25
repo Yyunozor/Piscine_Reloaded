@@ -6,15 +6,14 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:53:30 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/25 17:54:53 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/25 18:51:54 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-void	ft_putstr(char *str);
-int		ft_putchar(int c);
+// void	ft_putstr(char *str);
+// int		ft_putchar(int c);
 
 int	ft_strlen(char *str)
 {
