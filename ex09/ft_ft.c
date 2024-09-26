@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 22:04:11 by yyuno             #+#    #+#             */
-/*   Updated: 2024/09/26 20:06:33 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/26 21:00:36 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,3 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-    int nbr = 0;
-
-    ft_ft(&nbr);
-
-    printf("%d", nbr);
-    return 0;
-}
-*/
