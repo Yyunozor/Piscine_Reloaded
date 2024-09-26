@@ -6,19 +6,19 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:25:09 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/24 16:30:25 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/25 02:25:21 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_putchar(int c);
-void ft_putstr(char *str);
+int		ft_putchar(int c);
+void	ft_putstr(char *str);
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
 	{
 		ft_putstr("-2147483648");
-		return;
+		return ;
 	}
 	if (nb < 0)
 	{
@@ -32,7 +32,7 @@ void ft_putnbr(int nb)
 	ft_putchar(nb % 10 + '0');
 }
 
-int main(void)
+int	main(void)
 {
 	ft_putnbr(12345);
 	ft_putchar('\n');
@@ -42,5 +42,5 @@ int main(void)
 	ft_putchar('\n');
 	ft_putnbr(-42);
 	ft_putchar('\n');
-	return 0;
+	return (0);
 }

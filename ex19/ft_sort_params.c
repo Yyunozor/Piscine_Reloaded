@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:41:56 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/25 15:49:42 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/26 17:14:55 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,25 +58,26 @@ int	ft_strcmp_numeric(char *s1, char *s2)
 
 void	ft_sort_params(int argc, char **argv)
 {
-	int		i;
-	int		j;
+	char	**start;
+	char	**current;
+	char	**next;
 	char	*temp;
 
-	i = 1;
-	while (i < argc - 1)
+	start = argv + 1;
+	while (start < argv + argc - 1)
 	{
-		j = i + 1;
-		while (j < argc)
+		current = start + 1;
+		while (current < argv + argc)
 		{
-			if (ft_strcmp_numeric(argv[i], argv[j]) > 0)
+			if (ft_strcmp_numeric(*start, *current) > 0)
 			{
-				temp = argv[i];
-				argv[i] = argv[j];
-				argv[j] = temp;
+				temp = *start;
+				*start = *current;
+				*current = temp;
 			}
-			j++;
+			current++;
 		}
-		i++;
+		start++;
 	}
 }
 
