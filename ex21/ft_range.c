@@ -6,12 +6,11 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:55:49 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/25 18:27:15 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/26 15:48:26 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
 
 int	*ft_range(int min, int max)
 {
