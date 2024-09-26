@@ -34,7 +34,7 @@ $(SRCS_DIR)%.o: $(SRCS_DIR)%.c
 clean:
 	rm -f $(OBJS)
 
-fclean: clea
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
