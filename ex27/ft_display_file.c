@@ -1,39 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/27 23:55:51 by anpayot           #+#    #+#             */
+/*   Updated: 2024/09/27 23:56:33 by anpayot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <fcntl.h>
 #include <unistd.h>
-#include <fcntl.h>	// For open and close
 
-#define BUFFER_SIZE 4096
-
-// Function to display a string on the standard error output
 void	ft_puterror(char *str)
 {
 	while (*str)
 		write(2, str++, 1);
 }
 
-// Function to display the content of a file
 void	ft_display_file(char *filename)
 {
 	int		fd;
 	int		bytes_read;
-	char	buffer[BUFFER_SIZE];
+	char	buffer[4096];
 
-	// Open the file in read-only mode
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
 		ft_puterror("Cannot read file.\n");
 		return ;
 	}
-
-	// Read from the file and write to the standard output
-	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
+	bytes_read = read(fd, buffer, sizeof(buffer));
+	while (bytes_read > 0)
 	{
 		write(1, buffer, bytes_read);
+		bytes_read = read(fd, buffer, sizeof(buffer));
 	}
-
-	// Close the file descriptor
 	if (close(fd) == -1)
 		ft_puterror("Cannot close file.\n");
+}
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
 }
 
 int	main(int argc, char **argv)
@@ -44,6 +59,5 @@ int	main(int argc, char **argv)
 		ft_puterror("Too many arguments.\n");
 	else
 		ft_display_file(argv[1]);
-
 	return (0);
 }
