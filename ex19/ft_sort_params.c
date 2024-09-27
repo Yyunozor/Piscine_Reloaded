@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:41:56 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/26 17:14:55 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/27 16:58:31 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,63 +21,40 @@ void	ft_putstr(char *str)
 		ft_putchar(*str);
 		str++;
 	}
+	ft_putchar('\n');
 }
 
-int	ft_atoi(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	result;
-	int	sign;
-
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '-' || *str == '+')
+	while (*s1 && (*s1 == *s2))
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
+		s1++;
+		s2++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (result * sign);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
 
-int	ft_strcmp_numeric(char *s1, char *s2)
+void	ft_sort_params(char **argv, int argc)
 {
-	int	num1;
-	int	num2;
-
-	num1 = ft_atoi(s1);
-	num2 = ft_atoi(s2);
-	return (num1 - num2);
-}
-
-void	ft_sort_params(int argc, char **argv)
-{
-	char	**start;
-	char	**current;
-	char	**next;
+	int		i;
+	int		j;
 	char	*temp;
 
-	start = argv + 1;
-	while (start < argv + argc - 1)
+	i = 1;
+	while (i < argc - 1)
 	{
-		current = start + 1;
-		while (current < argv + argc)
+		j = 1;
+		while (j < argc - 1)
 		{
-			if (ft_strcmp_numeric(*start, *current) > 0)
+			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 			{
-				temp = *start;
-				*start = *current;
-				*current = temp;
+				temp = argv[j];
+				argv[j] = argv[j + 1];
+				argv[j + 1] = temp;
 			}
-			current++;
+			j++;
 		}
-		start++;
+		i++;
 	}
 }
 
@@ -85,12 +62,11 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
-	ft_sort_params(argc, argv);
+	ft_sort_params(argv, argc);
 	i = 1;
 	while (i < argc)
 	{
 		ft_putstr(argv[i]);
-		ft_putchar('\n');
 		i++;
 	}
 	return (0);

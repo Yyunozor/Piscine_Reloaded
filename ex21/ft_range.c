@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:55:49 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/26 20:24:03 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/27 16:58:50 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	*ft_range(int min, int max)
 		*p_range++ = min++;
 	return (range);
 }
+
 /*
 #include <stdio.h>
 int main(int ac, char **av)
