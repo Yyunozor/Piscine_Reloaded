@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:25:09 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/25 02:25:21 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/27 22:33:08 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_putnbr(int nb)
 	}
 	ft_putchar(nb % 10 + '0');
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(12345);
@@ -44,3 +44,4 @@ int	main(void)
 	ft_putchar('\n');
 	return (0);
 }
+*/
