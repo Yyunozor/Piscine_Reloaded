@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 23:08:19 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/27 23:22:48 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/29 22:34:03 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	count;
 
+	if (!tab)
+		return (0);
 	count = 0;
 	while (*tab != 0)
 	{

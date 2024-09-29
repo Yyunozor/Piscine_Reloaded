@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:53:30 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/25 18:51:54 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/29 22:28:35 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strdup(char *src)
 	char	*dup;
 	char	*p_dup;
 
+	if (!src)
+		return (NULL);
 	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!dup)
 		return (NULL);

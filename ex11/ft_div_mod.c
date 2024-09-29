@@ -6,14 +6,22 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 22:13:03 by anpayot           #+#    #+#             */
-/*   Updated: 2024/09/23 21:08:41 by anpayot          ###   ########.fr       */
+/*   Updated: 2024/09/29 22:18:37 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a / b;
-	*mod = a % b;
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
+	else
+	{
+		*div = 0;
+		*mod = 0;
+	}
 }
 
 /*
